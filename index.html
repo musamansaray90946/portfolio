@@ -3,364 +3,217 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mansaray Musa — Developer Portfolio</title>
+  <meta name="description" content="Mansaray Musa - Frontend Developer specializing in React, JavaScript, and modern web development. View my projects and skills." />
+  <title>Mansaray Musa — Frontend Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <header class="header">
     <div class="container header-inner">
-      <div>
+      <div class="header-brand">
         <h1 class="name">Mansaray Musa</h1>
         <p class="role">Frontend Developer</p>
       </div>
-      <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="intro">
-      <h2>About</h2>
-      <p>
-        A dedicated developer with hands-on experience building modern web apps using
-        HTML, CSS, JavaScript, and React. I build clean, functional projects that demonstrate
-        practical skills and a readiness to contribute to real teams.
-      </p>
+  <main id="main-content" class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Crafting Digital Experiences</h1>
+        <p class="hero-description">
+          Frontend Developer specializing in React, JavaScript, and modern web technologies. 
+          I build responsive, accessible web applications with clean code and user-focused design.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="projects-section">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">A collection of my recent work showcasing different technologies and approaches</p>
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <h2 id="projects-heading">Featured Projects</h2>
+        <p class="section-subtitle">A collection of my recent work</p>
+      </div>
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <article class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Realtime Chat App</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">Netlify</span>
+      <div class="projects-grid">
+        <article class="card" tabindex="0">
+          <div class="card-header">
+            <h3 class="card-title">TaskFlow — Task Manager</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
           </div>
-        </div>
-        <div class="project-content">
-          <p class="project-description">
-            Real-time chat platform with Google Login, Firestore sync, auto-scroll,
-            timestamps and smooth UI. Fully deployed on Netlify.
+          <p class="card-description">
+            A responsive task management application with local storage persistence, 
+            featuring task creation, completion tracking, and data persistence.
           </p>
-          <div class="project-features">
-            <span class="feature">Real-time messaging</span>
-            <span class="feature">Google Authentication</span>
-            <span class="feature">Auto-scroll</span>
+          <div class="card-actions">
+            <a href="https://musamansaray90946.github.io/taskflow-project/" 
+               class="btn btn-outline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Live Demo
+            </a>
+            <a href="https://github.com/musamansaray90946/taskflow-project" 
+               class="btn btn-ghost" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Source Code
+            </a>
           </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link primary" href="https://mansaray-chatapp.netlify.app" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 5C14 3.89543 14.8954 3 16 3H21C21.5523 3 22 3.44772 22 4V9C22 10.1046 21.1046 11 20 11H14C12.8954 11 12 10.1046 12 9V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13H4C2.89543 13 2 13.8954 2 15V20C2 20.5523 2.44772 21 3 21H8C9.10457 21 10 20.1046 10 19V13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 3H20C20.5523 3 21 3.44772 21 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 11V15C22 15.5523 21.5523 16 21 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13V9C10 8.44772 9.55228 8 9 8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Live Demo
-          </a>
-          <a class="project-link secondary" href="https://github.com/musamansaray90946/realtimechat" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.04 17.65 15.94 17.17 15.71 16.75C17.28 16.45 18.86 15.82 18.86 11.5C18.86 10.4 18.49 9.35 17.83 8.52C18.13 7.52 18.11 6.43 17.7 5.45C17.7 5.45 16.73 5.15 14.85 6.47C13.27 6.04 11.59 6.04 10.01 6.47C8.13 5.15 7.16 5.45 7.16 5.45C6.75 6.43 6.73 7.52 7.03 8.52C6.37 9.35 6 10.4 6 11.5C6 15.82 7.58 16.45 9.15 16.75C8.92 17.17 8.82 17.65 8.86 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Source Code
-          </a>
-        </div>
-      </article>
+        </article>
 
-      <!-- Project 2 -->
-      <article class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">TaskFlow — Task Manager</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
+        <article class="card" tabindex="0">
+          <div class="card-header">
+            <h3 class="card-title">SmartInventory — React App</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">CSS</span>
+            </div>
           </div>
-        </div>
-        <div class="project-content">
-          <p class="project-description">
-            Simple browser-based task manager built with HTML, CSS and JavaScript. 
-            Saves tasks in localStorage with a clean, intuitive interface.
+          <p class="card-description">
+            Inventory management application built with React, demonstrating component 
+            architecture, state management, and modern development workflows.
           </p>
-          <div class="project-features">
-            <span class="feature">Local storage</span>
-            <span class="feature">Task management</span>
-            <span class="feature">Responsive design</span>
+          <div class="card-actions">
+            <a href="https://keen-profiterole-d55be3.netlify.app" 
+               class="btn btn-outline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Live Demo
+            </a>
+            <a href="https://github.com/musamansaray90946/smartinvenotry" 
+               class="btn btn-ghost" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Source Code
+            </a>
           </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link primary" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 5C14 3.89543 14.8954 3 16 3H21C21.5523 3 22 3.44772 22 4V9C22 10.1046 21.1046 11 20 11H14C12.8954 11 12 10.1046 12 9V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13H4C2.89543 13 2 13.8954 2 15V20C2 20.5523 2.44772 21 3 21H8C9.10457 21 10 20.1046 10 19V13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 3H20C20.5523 3 21 3.44772 21 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 11V15C22 15.5523 21.5523 16 21 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13V9C10 8.44772 9.55228 8 9 8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Live Demo
-          </a>
-          <a class="project-link secondary" href="https://github.com/musamansaray90946/taskflow-project" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.04 17.65 15.94 17.17 15.71 16.75C17.28 16.45 18.86 15.82 18.86 11.5C18.86 10.4 18.49 9.35 17.83 8.52C18.13 7.52 18.11 6.43 17.7 5.45C17.7 5.45 16.73 5.15 14.85 6.47C13.27 6.04 11.59 6.04 10.01 6.47C8.13 5.15 7.16 5.45 7.16 5.45C6.75 6.43 6.73 7.52 7.03 8.52C6.37 9.35 6 10.4 6 11.5C6 15.82 7.58 16.45 9.15 16.75C8.92 17.17 8.82 17.65 8.86 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Source Code
-          </a>
-        </div>
-      </article>
+        </article>
 
-      <!-- Project 3 -->
-      <article class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">SmartInventory — Inventory App</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">State Management</span>
-            <span class="tech-tag">UI/UX</span>
+        <article class="card" tabindex="0">
+          <div class="card-header">
+            <h3 class="card-title">QuickWeather — Weather App</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">API</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS</span>
+            </div>
           </div>
-        </div>
-        <div class="project-content">
-          <p class="project-description">
-            React-based inventory tracker with components, state and clean UI for managing items efficiently.
+          <p class="card-description">
+            Real-time weather application integrating with OpenWeather API to display 
+            current conditions, temperature, humidity, and weather forecasts.
           </p>
-          <div class="project-features">
-            <span class="feature">Component-based</span>
-            <span class="feature">State management</span>
-            <span class="feature">Clean UI</span>
+          <div class="card-actions">
+            <a href="https://musamansaray90946.github.io/quickweather/" 
+               class="btn btn-outline" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Live Demo
+            </a>
+            <a href="https://github.com/musamansaray90946/quickweather" 
+               class="btn btn-ghost" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Source Code
+            </a>
           </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link primary" href="https://keen-profiterole-d55be3.netlify.app" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 5C14 3.89543 14.8954 3 16 3H21C21.5523 3 22 3.44772 22 4V9C22 10.1046 21.1046 11 20 11H14C12.8954 11 12 10.1046 12 9V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13H4C2.89543 13 2 13.8954 2 15V20C2 20.5523 2.44772 21 3 21H8C9.10457 21 10 20.1046 10 19V13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 3H20C20.5523 3 21 3.44772 21 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 11V15C22 15.5523 21.5523 16 21 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13V9C10 8.44772 9.55228 8 9 8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Live Demo
-          </a>
-          <a class="project-link secondary" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.04 17.65 15.94 17.17 15.71 16.75C17.28 16.45 18.86 15.82 18.86 11.5C18.86 10.4 18.49 9.35 17.83 8.52C18.13 7.52 18.11 6.43 17.7 5.45C17.7 5.45 16.73 5.15 14.85 6.47C13.27 6.04 11.59 6.04 10.01 6.47C8.13 5.15 7.16 5.45 7.16 5.45C6.75 6.43 6.73 7.52 7.03 8.52C6.37 9.35 6 10.4 6 11.5C6 15.82 7.58 16.45 9.15 16.75C8.92 17.17 8.82 17.65 8.86 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Source Code
-          </a>
-        </div>
-      </article>
+        </article>
+      </div>
+    </section>
 
-      <!-- Project 4 -->
-      <article class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">QuickWeather — Weather Lookup</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">API Integration</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Responsive</span>
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="section-header">
+        <h2 id="skills-heading">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-category-title">Frontend</h3>
+          <ul class="skills-list">
+            <li class="skill-item">HTML5 & Semantic Markup</li>
+            <li class="skill-item">CSS3 & Flexbox/Grid</li>
+            <li class="skill-item">JavaScript (ES6+)</li>
+            <li class="skill-item">React & Hooks</li>
+            <li class="skill-item">Responsive Design</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="skill-category-title">Tools & Methods</h3>
+          <ul class="skills-list">
+            <li class="skill-item">Git & GitHub</li>
+            <li class="skill-item">REST APIs</li>
+            <li class="skill-item">Vite</li>
+            <li class="skill-item">Chrome DevTools</li>
+            <li class="skill-item">Agile Development</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="section-header">
+        <h2 id="contact-heading">Get In Touch</h2>
+        <p class="section-subtitle">Let's discuss opportunities or collaborations</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>I'm always interested in new challenges and opportunities to grow as a developer.</p>
+          <div class="contact-links">
+            <a href="mailto:musamansaray90946@gmail.com" class="contact-link">
+              <span class="contact-icon">✉️</span>
+              musamansaray90946@gmail.com
+            </a>
+            <a href="https://github.com/musamansaray90946" 
+               class="contact-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <span class="contact-icon">💻</span>
+              github.com/musamansaray90946
+            </a>
           </div>
         </div>
-        <div class="project-content">
-          <p class="project-description">
-            Fetches weather data using the OpenWeather API. Displays temperature, humidity and conditions with a clean interface.
-          </p>
-          <div class="project-features">
-            <span class="feature">API integration</span>
-            <span class="feature">Real-time data</span>
-            <span class="feature">Weather display</span>
-          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <small>© <span id="year"></span> Mansaray Musa — Built with HTML, CSS & JavaScript</small>
+        <div class="footer-links">
+          <a href="#main-content" class="back-to-top">Back to Top</a>
         </div>
-        <div class="project-links">
-          <a class="project-link primary" href="https://musamansaray90946.github.io/quickweather/" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 5C14 3.89543 14.8954 3 16 3H21C21.5523 3 22 3.44772 22 4V9C22 10.1046 21.1046 11 20 11H14C12.8954 11 12 10.1046 12 9V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13H4C2.89543 13 2 13.8954 2 15V20C2 20.5523 2.44772 21 3 21H8C9.10457 21 10 20.1046 10 19V13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M16 3H20C20.5523 3 21 3.44772 21 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 11V15C22 15.5523 21.5523 16 21 16H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 13V9C10 8.44772 9.55228 8 9 8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Live Demo
-          </a>
-          <a class="project-link secondary" href="https://github.com/musamansaray90946/quickweather" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.04 17.65 15.94 17.17 15.71 16.75C17.28 16.45 18.86 15.82 18.86 11.5C18.86 10.4 18.49 9.35 17.83 8.52C18.13 7.52 18.11 6.43 17.7 5.45C17.7 5.45 16.73 5.15 14.85 6.47C13.27 6.04 11.59 6.04 10.01 6.47C8.13 5.15 7.16 5.45 7.16 5.45C6.75 6.43 6.73 7.52 7.03 8.52C6.37 9.35 6 10.4 6 11.5C6 15.82 7.58 16.45 9.15 16.75C8.92 17.17 8.82 17.65 8.86 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Source Code
-          </a>
-        </div>
-      </article>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<style>
-.projects-section {
-  padding: 5rem 1rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #2d3748;
-  font-weight: 700;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #718096;
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.project-header {
-  margin-bottom: 1rem;
-}
-
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2d3748;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.tech-tag {
-  background: #edf2f7;
-  color: #4a5568;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.project-content {
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-}
-
-.project-description {
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.project-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.feature {
-  background: #f7fafc;
-  color: #4a5568;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  border: 1px solid #e2e8f0;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: auto;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
-}
-
-.project-link.primary {
-  background: #4299e1;
-  color: white;
-}
-
-.project-link.primary:hover {
-  background: #3182ce;
-}
-
-.project-link.secondary {
-  background: transparent;
-  color: #4a5568;
-  border: 1px solid #cbd5e0;
-}
-
-.project-link.secondary:hover {
-  background: #f7fafc;
-  border-color: #a0aec0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .projects-section {
-    padding: 3rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-links {
-    flex-direction: column;
-  }
-}
-</style>
+  <script src="script.js"></script>
+</body>
+</html>

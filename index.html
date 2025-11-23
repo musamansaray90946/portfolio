@@ -3,117 +3,139 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mansaray Musa — Developer Portfolio</title>
+  <title>Mansaray Musa — Frontend Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header class="header">
     <div class="container header-inner">
-      <div class="profile-section">
-        <img src="profile.jpg" alt="Profile" class="profile-img" />
-        <div>
+      <div class="profile-area">
+        <img src="profile.jpg" alt="Mansaray Musa" class="profile-img" />
+        <div class="profile-text">
           <h1 class="name">Mansaray Musa</h1>
-          <img src="profile.jpg" class="profile-photo" alt="Mansaray Musa photo">
-          <p class="role">Frontend Developer & AI-Powered App Builder</p>
+          <p class="tagline">Frontend Developer · React · JavaScript · Firebase</p>
+          <p class="education">BSc Computer Science (2019) • Master’s in Computer Science (2025)</p>
         </div>
       </div>
 
       <nav class="nav">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a href="mailto:musamansaray90946@gmail.com" class="hire-btn">Hire Me</a>
       </nav>
-      <div class="cta-buttons">
-  <a class="whatsapp-btn" href="https://wa.me/35796240674" target="_blank">WhatsApp</a>
-  <a class="download-btn" href="Musa-new-resume-1.pdf" download>Download CV</a>
-</div>
-
     </div>
   </header>
 
   <main class="container">
-    <section class="intro">
-      <h2>About Me</h2>
-      <p>
-        I’m Musa, a frontend developer focused on building clean, functional web apps.
-        I create practical tools using HTML, CSS, JavaScript, and React — including modern,
-        AI-assisted and real-time applications. I enjoy turning ideas into real products that
-        users can interact with.
-      </p>
-    </section>
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Hello — I build useful, user-focused web apps.</h2>
+        <p class="hero-sub">
+          I design and build front-end applications using React and modern JavaScript.
+          My work includes realtime systems, CRUD apps and small product-focused tools.
+        </p>
 
-    <section id="projects">
-      <h2>Projects</h2>
+        <div class="cta-buttons">
+          <a class="primary-btn" href="mailto:musamansaray90946@gmail.com">Hire Me (Email)</a>
+          <a class="whatsapp-btn" href="https://wa.me/35796240674" target="_blank" rel="noopener">WhatsApp</a>
+          <!-- resume link points to the uploaded file path; when deployed make sure resume file is in repo root -->
+          <a class="download-btn" href="sandbox:/mnt/data/Musa new resume 1.pdf" download>Download CV</a>
+        </div>
+      </div>
 
-      <div class="projects-grid">
-
-        <article class="card fade">
-          <h3>RealtimeChat — Firebase Chat App</h3>
-          <p>A real-time chat app with Google login, live messages, and Firestore database.</p>
-          <p>
-            <a class="link" href="https://mansaray-chatapp.netlify.app/" target="_blank">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/realtimechat" target="_blank">Source</a>
-          </p>
-        </article>
-
-        <article class="card fade">
-          <h3>TaskFlow — Task Manager</h3>
-          <p>A task manager built with HTML, CSS & JavaScript, saving tasks to localStorage.</p>
-          <p>
-            <a class="link" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/taskflow-project" target="_blank">Source</a>
-          </p>
-        </article>
-
-        <article class="card fade">
-          <h3>SmartInventory — React Inventory App</h3>
-          <p>A simple React inventory tracker showing item management and UI components.</p>
-          <p>
-            <a class="link" href="https://keen-profiterole-d55be3.netlify.app" target="_blank">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank">Source</a>
-          </p>
-        </article>
-
-        <article class="card fade">
-          <h3>QuickWeather — Weather Lookup</h3>
-          <p>Shows real-time weather using OpenWeather API.</p>
-          <p>
-            <a class="link" href="https://musamansaray90946.github.io/quickweather/" target="_blank">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/quickweather" target="_blank">Source</a>
-          </p>
-        </article>
-
+      <div class="hero-right">
+        <!-- circular card with a short highlights -->
+        <div class="card summary-card">
+          <h4>Skills</h4>
+          <ul class="mini-skills">
+            <li>React (Vite)</li>
+            <li>JavaScript (ES6+)</li>
+            <li>HTML & CSS</li>
+            <li>Firebase / Firestore</li>
+            <li>Responsive design</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="card">
+          <h3>RealtimeChat — React & Firebase</h3>
+          <p>Real-time chat app with Google Authentication, Firestore real-time sync, timestamps and auto-scroll. Responsive and deployed on Netlify.</p>
+          <p class="links">
+            <a class="link" href="https://mansaray-chatapp.netlify.app" target="_blank" rel="noopener">Live demo</a> ·
+            <a class="link" href="https://github.com/musamansaray90946/realtimechat" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>SmartInventory — React</h3>
+          <p>Inventory management UI demonstrating React components, state and CRUD flows.</p>
+          <p class="links">
+            <a class="link" href="https://keen-profiterole-d55be3.netlify.app" target="_blank" rel="noopener">Live demo</a> ·
+            <a class="link" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>TaskFlow — Task Manager</h3>
+          <p>Simple, focused task manager using localStorage and a clean UI.</p>
+          <p class="links">
+            <a class="link" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank" rel="noopener">Live demo</a> ·
+            <a class="link" href="https://github.com/musamansaray90946/taskflow-project" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>QuickWeather — API App</h3>
+          <p>Fetches live weather data via OpenWeather API and displays clear metrics and conditions.</p>
+          <p class="links">
+            <a class="link" href="https://musamansaray90946.github.io/quickweather/" target="_blank" rel="noopener">Live demo</a> ·
+            <a class="link" href="https://github.com/musamansaray90946/quickweather" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
       <h2>Skills</h2>
-      <ul class="skills">
+      <ul class="skills-list">
         <li>HTML / CSS / JavaScript</li>
-        <li>React (Vite)</li>
-        <li>Firebase / Firestore</li>
-        <li>REST APIs</li>
-        <li>Git & GitHub</li>
-        <li>Responsive Design</li>
-        <li>AI-Assisted Development</li>
+        <li>React (Vite) & Component Design</li>
+        <li>Firebase Auth & Firestore</li>
+        <li>Responsive Web Design</li>
+        <li>Git, GitHub, Deployment (Netlify)</li>
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h4>BSc — Computer Science</h4>
+          <p class="muted">Graduated 2019</p>
+        </div>
+        <div class="edu-card">
+          <h4>Master’s — Computer Science</h4>
+          <p class="muted">Graduated 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/musamansaray90946" target="_blank">github.com/musamansaray90946</a></p>
-      <p>WhatsApp: <a href="https://wa.me/+35796240674" target="_blank">Chat on WhatsApp</a></p>
+      <p>WhatsApp: <a href="https://wa.me/35796240674" target="_blank" rel="noopener">+357 96 240 674</a></p>
+      <p>GitHub: <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">github.com/musamansaray90946</a></p>
     </section>
   </main>
-<!-- Download resume button -->
-<a class="hire-btn" href="Musa new resume 1.pdf" download>Download CV</a>
 
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> Mansaray Musa — Portfolio</small>
+      <small>© <span id="year"></span> Mansaray Musa — Frontend Developer</small>
     </div>
   </footer>
 

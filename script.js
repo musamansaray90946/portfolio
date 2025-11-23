@@ -1,7 +1,7 @@
 // Portfolio Enhancement Script
 document.addEventListener('DOMContentLoaded', function() {
   // Set current year in footer
-  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 
   // Mobile menu functionality
   const menuToggle = document.querySelector('.menu-toggle');

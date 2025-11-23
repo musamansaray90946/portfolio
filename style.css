@@ -1,95 +1,149 @@
-/* Featured card styles */
-.card.featured {
-  position: relative;
-  border: 2px solid var(--accent);
-  grid-column: 1 / -1;
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --accent: #2563eb;
+  --shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-.card-badge {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  background: var(--accent);
-  color: white;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* Card features list */
-.card-features {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0;
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-.card-features li {
-  position: relative;
-  padding: 4px 0;
-  padding-left: 20px;
-  color: var(--muted);
-  font-size: 14px;
+/* HEADER */
+.header {
+  background: var(--card);
+  border-bottom: 1px solid #e6e9f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 0;
 }
 
-.card-features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: bold;
-}
-
-/* Enhanced projects grid for featured item */
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .card.featured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-  
-  .card.featured .card-header {
-    grid-column: 1 / -1;
-  }
-  
-  .card.featured .card-description {
-    grid-column: 1 / -1;
-  }
-  
-  .card.featured .card-features {
-    grid-column: 1;
-  }
-  
-  .card.featured .card-actions {
-    grid-column: 2;
-    justify-content: flex-start;
-  }
-}
-
-/* Three-column skills grid */
-.skills-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Enhanced card actions for multiple buttons */
-.card-actions {
+.header-inner {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.card-actions .btn {
-  flex: 1;
-  min-width: 120px;
-  justify-content: center;
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.name { margin: 0; }
+.role { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav a:hover { color: var(--accent); }
+
+.hire-btn {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.hire-btn:hover {
+  opacity: 0.9;
+}
+
+/* INTRO */
+.intro {
+  margin-top: 25px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+}
+
+.card h3 { margin: 0 0 8px; }
+.card p { color: var(--muted); margin: 6px 0; }
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+
+/* SKILLS */
+.skills {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills li {
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #e6e9f0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
   text-align: center;
+  color: var(--muted);
+}
+
+/* ANIMATION */
+.fade {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }

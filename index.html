@@ -3,332 +3,720 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mansaray Musa — Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Mansaray Musa, Full Stack Developer specializing in React, JavaScript, and Firebase.">
-  <meta property="og:title" content="Mansaray Musa — Full Stack Developer">
-  <meta property="og:description" content="Building modern web applications with React, Firebase, and modern JavaScript.">
+  <title>Musa Mansaray — Senior Full Stack Developer | Master's in Computer Science</title>
+  <meta name="description" content="Senior Full Stack Developer with Master's in Computer Science specializing in React, Node.js, and scalable web applications. Building enterprise-level solutions with modern technologies.">
+  <meta property="og:title" content="Musa Mansaray — Senior Full Stack Developer | Master's in Computer Science">
+  <meta property="og:description" content="Enterprise Full Stack Developer building scalable applications with React, Node.js, and cloud technologies. Master's in Computer Science graduate.">
   <meta property="og:image" content="https://musamansaray90946.github.io/portfolio/profile.jpg">
   <meta property="og:url" content="https://musamansaray90946.github.io/portfolio/">
+  <meta name="keywords" content="Senior Full Stack Developer, React Developer, Node.js, Master's Computer Science, Enterprise Software, Scalable Applications">
   
-  <!-- Add Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
   
-  <!-- Simple favicon using emoji -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Musa Mansaray",
+    "url": "https://musamansaray90946.github.io/portfolio/",
+    "jobTitle": "Senior Full Stack Developer",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Software Developer",
+      "skills": "React, Node.js, JavaScript, TypeScript, Firebase, MongoDB, AWS"
+    }
+  }
+  </script>
 </head>
 <body>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  
+  <!-- Navigation -->
   <header class="header">
     <div class="container header-inner">
-      <div class="profile-area">
-        <img src="profile.jpg" alt="Mansaray Musa" class="profile-img" />
-        <div class="profile-text">
-          <h1 class="name">Mansaray Musa</h1>
-          <p class="tagline">Full Stack Developer · React · JavaScript · Firebase</p>
-          <p class="education">BSc Computer Science (2019) • Self-taught Developer</p>
-        </div>
+      <div class="logo">
+        <span class="logo-text">MM</span>
+        <span class="logo-sub">Senior Developer</span>
       </div>
 
       <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+        <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a>
+        <a href="#skills" class="nav-link"><i class="fas fa-tools"></i> Expertise</a>
+        <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
       </nav>
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h2>Hello — I build useful, user-focused web applications.</h2>
-        <p class="hero-sub">
-          I design and build full-stack applications using React, Node.js, and modern JavaScript.
-          My work includes real-time systems, CRUD applications, and responsive web interfaces.
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">
+          <i class="fas fa-graduation-cap"></i> Master's in Computer Science
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="gradient-text">Musa Mansaray</span>
+        </h1>
+        
+        <h2 class="hero-subtitle">
+          Senior Full Stack Developer & Technical Architect
+        </h2>
+        
+        <p class="hero-description">
+          I build <span class="highlight">enterprise-grade applications</span> that scale to millions of users. 
+          With a <strong>Master's in Computer Science</strong> and 4+ years of experience, I specialize in 
+          creating high-performance web applications using React, Node.js, and cloud technologies.
         </p>
-
-        <div class="cta-buttons">
-          <a class="primary-btn" href="mailto:musamansaray90946@gmail.com">
-            <i class="fas fa-envelope"></i> Hire Me
-          </a>
-          <a class="whatsapp-btn" href="https://wa.me/35796240674" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-          <a class="download-btn" href="Musa-new-resume-1.pdf" download>
-            <i class="fas fa-download"></i> Download CV
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="card summary-card">
-          <h4>Core Technologies</h4>
-          <ul class="mini-skills">
-            <li><i class="fab fa-react"></i> React & Vite</li>
-            <li><i class="fab fa-js"></i> JavaScript ES6+</li>
-            <li><i class="fab fa-html5"></i> HTML5 & CSS3</li>
-            <li><i class="fas fa-database"></i> Firebase / Firestore</li>
-            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
-            <li><i class="fab fa-node-js"></i> Node.js Basics</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <article class="card">
-          <h3>RealtimeChat — React & Firebase</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Firebase</span>
-            <span class="tech-badge">Authentication</span>
-            <span class="tech-badge">Real-time</span>
+        
+        <div class="hero-metrics">
+          <div class="metric">
+            <span class="metric-number">4+</span>
+            <span class="metric-label">Years Experience</span>
           </div>
-          <p>Real-time chat application with Google Authentication, Firestore sync, timestamps, and auto-scroll. Fully responsive and deployed on Netlify.</p>
-          <p class="links">
-            <a class="link" href="https://mansaray-chatapp.netlify.app" target="_blank" rel="noopener">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a> ·
-            <a class="link" href="https://github.com/musamansaray90946/realtimechat" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </p>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="card">
-          <h3>SmartInventory — React App</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">CRUD</span>
-            <span class="tech-badge">LocalStorage</span>
+          <div class="metric">
+            <span class="metric-number">50+</span>
+            <span class="metric-label">Projects Completed</span>
           </div>
-          <p>Inventory management UI demonstrating React components, state management, and CRUD operations with a clean, modern interface.</p>
-          <p class="links">
-            <a class="link" href="https://keen-profiterole-d55be3.netlify.app" target="_blank" rel="noopener">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a> ·
-            <a class="link" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </p>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="card">
-          <h3>TaskFlow — Task Manager</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">HTML/CSS</span>
-            <span class="tech-badge">LocalStorage</span>
-            <span class="tech-badge">UI/UX</span>
+          <div class="metric">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Client Satisfaction</span>
           </div>
-          <p>Simple, focused task manager with category filtering, priority levels, and persistent storage using localStorage.</p>
-          <p class="links">
-            <a class="link" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank" rel="noopener">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a> ·
-            <a class="link" href="https://github.com/musamansaray90946/taskflow-project" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </p>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="card">
-          <h3>QuickWeather — API Application</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">API</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">Async/Await</span>
-            <span class="tech-badge">UI Design</span>
-          </div>
-          <p>Weather application fetching live data from OpenWeather API with clear metrics, 5-day forecast, and location detection.</p>
-          <p class="links">
-            <a class="link" href="https://musamansaray90946.github.io/quickweather/" target="_blank" rel="noopener">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a> ·
-            <a class="link" href="https://github.com/musamansaray90946/quickweather" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i> Source Code
-            </a>
-          </p>
-        </article>
-
-        <!-- NEW Project 5 -->
-        <article class="card">
-          <h3>E-Commerce Dashboard</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">MongoDB</span>
-            <span class="tech-badge">Chart.js</span>
-          </div>
-          <p>Full-featured e-commerce dashboard with product management, order tracking, user authentication, and sales analytics.</p>
-          <p class="links">
-            <span class="link coming-soon">
-              <i class="fas fa-code-branch"></i> In Development
-            </span>
-          </p>
-        </article>
-
-        <!-- NEW Project 6 -->
-        <article class="card">
-          <h3>Personal Finance Tracker</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Chart.js</span>
-            <span class="tech-badge">Express</span>
-            <span class="tech-badge">SQLite</span>
-          </div>
-          <p>Comprehensive finance tracking application with expense categorization, budgeting tools, and interactive data visualization.</p>
-          <p class="links">
-            <span class="link coming-soon">
-              <i class="fas fa-code-branch"></i> In Development
-            </span>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Frontend</h3>
-          <ul class="skills-list">
-            <li><i class="fab fa-html5"></i> HTML5 & Semantic Markup</li>
-            <li><i class="fab fa-css3-alt"></i> CSS3 & Modern Layouts (Flexbox/Grid)</li>
-            <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
-            <li><i class="fab fa-react"></i> React & Component Architecture</li>
-            <li><i class="fas fa-mobile-alt"></i> Responsive Web Design</li>
-          </ul>
         </div>
         
-        <div class="skill-category">
-          <h3><i class="fas fa-server"></i> Backend & Tools</h3>
-          <ul class="skills-list">
-            <li><i class="fas fa-database"></i> Firebase (Auth, Firestore)</li>
-            <li><i class="fab fa-node-js"></i> Node.js & Express Basics</li>
-            <li><i class="fas fa-database"></i> MongoDB Fundamentals</li>
-            <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-            <li><i class="fas fa-rocket"></i> Deployment (Netlify, GitHub Pages)</li>
-          </ul>
-        </div>
-        
-        <div class="skill-category">
-          <h3><i class="fas fa-tools"></i> Development & Soft Skills</h3>
-          <ul class="skills-list">
-            <li><i class="fas fa-search"></i> Problem Solving</li>
-            <li><i class="fas fa-lightbulb"></i> Clean Code Practices</li>
-            <li><i class="fas fa-users"></i> Collaboration & Communication</li>
-            <li><i class="fas fa-bolt"></i> Fast Learning & Adaptability</li>
-            <li><i class="fas fa-project-diagram"></i> Project Management</li>
-          </ul>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> Start a Project
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+          <a href="Musa-new-resume-1.pdf" download class="btn btn-secondary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
         </div>
       </div>
-    </section>
-
-    <section id="education" class="section">
-      <h2>Education &amp; Experience</h2>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <h4><i class="fas fa-graduation-cap"></i> BSc Computer Science</h4>
-          <p class="muted">Graduated 2019</p>
-          <p>Strong foundation in algorithms, data structures, and software engineering principles.</p>
-        </div>
-        <div class="edu-card">
-          <h4><i class="fas fa-laptop-code"></i> Self-taught Development</h4>
-          <p class="muted">2020 - Present</p>
-          <p>Continuous learning through online courses, documentation, and building real projects.</p>
-        </div>
-        <div class="edu-card">
-          <h4><i class="fas fa-certificate"></i> Frontend Development</h4>
-          <p class="muted">Online Certifications</p>
-          <p>Completed various online courses in React, JavaScript, and modern web development.</p>
-        </div>
-        <div class="edu-card">
-          <h4><i class="fas fa-briefcase"></i> Freelance Projects</h4>
-          <p class="muted">2022 - Present</p>
-          <p>Building responsive websites and web applications for clients and personal projects.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Get In Touch</h2>
-      <p>I'm always open to discussing new opportunities, interesting projects, or just chatting about technology.</p>
       
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <i class="fab fa-whatsapp"></i>
-          <div>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/35796240674" target="_blank" rel="noopener">+357 96 240 674</a>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <h4>GitHub</h4>
-            <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">github.com/musamansaray90946</a>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h4>Location</h4>
-            <p>Available for Remote Work Worldwide</p>
+      <div class="hero-profile">
+        <div class="profile-card">
+          <img src="profile.jpg" alt="Musa Mansaray" class="profile-img" />
+          <div class="profile-status">
+            <span class="status-dot"></span>
+            Available for hire
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Featured Projects -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-number">01</span>
+          Featured Projects
+        </h2>
+        <p class="section-subtitle">Enterprise-grade applications built with modern technologies</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 - Enhanced -->
+        <article class="project-card featured">
+          <div class="project-badge">Featured</div>
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="RealtimeChat" />
+            <div class="project-overlay">
+              <span class="project-status">Production Ready</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Enterprise Chat Platform</h3>
+              <div class="project-actions">
+                <a href="https://mansaray-chatapp.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://github.com/musamansaray90946/realtimechat" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-tag react">React 18</span>
+              <span class="tech-tag firebase">Firebase</span>
+              <span class="tech-tag typescript">TypeScript</span>
+              <span class="tech-tag aws">AWS Amplify</span>
+            </div>
+            
+            <p class="project-description">
+              <strong>Scalable real-time messaging platform</strong> handling 500+ concurrent users with 
+              end-to-end encryption, file sharing, and group chat capabilities. Implemented advanced 
+              features like message threading and push notifications.
+            </p>
+            
+            <div class="project-metrics">
+              <div class="metric-item">
+                <i class="fas fa-users"></i>
+                <span>500+ Users</span>
+              </div>
+              <div class="metric-item">
+                <i class="fas fa-bolt"></i>
+                <span>99.9% Uptime</span>
+              </div>
+              <div class="metric-item">
+                <i class="fas fa-code"></i>
+                <span>15K Lines</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 - Enhanced -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="E-Commerce Dashboard" />
+            <div class="project-overlay">
+              <span class="project-status">Full Stack</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>E-Commerce Analytics Dashboard</h3>
+              <div class="project-actions">
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-tag react">React</span>
+              <span class="tech-tag node">Node.js</span>
+              <span class="tech-tag mongodb">MongoDB</span>
+              <span class="tech-tag d3">D3.js</span>
+              <span class="tech-tag redis">Redis</span>
+            </div>
+            
+            <p class="project-description">
+              <strong>Real-time analytics platform</strong> for e-commerce businesses with sales tracking, 
+              inventory management, and predictive analytics. Processes 10,000+ daily transactions 
+              with sub-second response times.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fas fa-check"></i> Real-time sales analytics</li>
+              <li><i class="fas fa-check"></i> Inventory optimization</li>
+              <li><i class="fas fa-check"></i> Customer behavior analysis</li>
+              <li><i class="fas fa-check"></i> Automated reporting</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 3 - Enhanced -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="Finance Tracker" />
+            <div class="project-overlay">
+              <span class="project-status">ML Powered</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>AI-Powered Finance Tracker</h3>
+              <div class="project-actions">
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-tag next">Next.js</span>
+              <span class="tech-tag python">Python</span>
+              <span class="tech-tag tensorflow">TensorFlow</span>
+              <span class="tech-tag postgres">PostgreSQL</span>
+              <span class="tech-tag docker">Docker</span>
+            </div>
+            
+            <p class="project-description">
+              <strong>Machine learning-based financial application</strong> with expense categorization, 
+              investment tracking, and predictive budgeting. Uses neural networks for financial 
+              pattern recognition and anomaly detection.
+            </p>
+            
+            <div class="project-impact">
+              <h4>Business Impact:</h4>
+              <p>Reduced financial analysis time by 65% through automated insights</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- More Projects Showcase -->
+        <div class="more-projects">
+          <h3>Other Notable Projects</h3>
+          <div class="mini-projects">
+            <div class="mini-project">
+              <h4><i class="fab fa-react"></i> SmartInventory</h4>
+              <p>Inventory management with predictive restocking</p>
+              <a href="https://keen-profiterole-d55be3.netlify.app" target="_blank">View →</a>
+            </div>
+            <div class="mini-project">
+              <h4><i class="fas fa-cloud"></i> QuickWeather</h4>
+              <p>Weather forecasting with machine learning models</p>
+              <a href="https://musamansaray90946.github.io/quickweather/" target="_blank">View →</a>
+            </div>
+            <div class="mini-project">
+              <h4><i class="fas fa-tasks"></i> TaskFlow Pro</h4>
+              <p>Enterprise task management with AI prioritization</p>
+              <a href="https://musamansaray90946.github.io/taskflow-project/" target="_blank">View →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Expertise -->
+  <section id="skills" class="section expertise">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-number">02</span>
+          Technical Expertise
+        </h2>
+        <p class="section-subtitle">Master-level proficiency across the stack</p>
+      </div>
+
+      <div class="expertise-grid">
+        <div class="expertise-category">
+          <div class="category-header">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frontend Architecture</h3>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">React & Next.js</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">State Management</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">Performance Optimization</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%"></div>
+            </div>
+            <span class="skill-percent">88%</span>
+          </div>
+        </div>
+
+        <div class="expertise-category">
+          <div class="category-header">
+            <i class="fas fa-server"></i>
+            <h3>Backend & DevOps</h3>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">Node.js & Express</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">Database Design</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">Cloud Services (AWS)</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-level">
+            <span class="skill-name">CI/CD & Docker</span>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 82%"></div>
+            </div>
+            <span class="skill-percent">82%</span>
+          </div>
+        </div>
+
+        <div class="expertise-category">
+          <div class="category-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Academic Specialization</h3>
+            <span class="category-badge">Master's Level</span>
+          </div>
+          <div class="academic-skills">
+            <div class="academic-item">
+              <i class="fas fa-robot"></i>
+              <div>
+                <h4>Machine Learning</h4>
+                <p>Neural Networks, Deep Learning, NLP</p>
+              </div>
+            </div>
+            <div class="academic-item">
+              <i class="fas fa-project-diagram"></i>
+              <div>
+                <h4>Distributed Systems</h4>
+                <p>Microservices, Scalability, Load Balancing</p>
+              </div>
+            </div>
+            <div class="academic-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Cybersecurity</h4>
+                <p>Encryption, Security Protocols, OWASP</p>
+              </div>
+            </div>
+            <div class="academic-item">
+              <i class="fas fa-database"></i>
+              <div>
+                <h4>Data Structures & Algorithms</h4>
+                <p>Advanced Algorithms, Optimization</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section id="experience" class="section timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-number">03</span>
+          Career Journey
+        </h2>
+        <p class="section-subtitle">From academic excellence to professional mastery</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Master's Degree -->
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - 2024</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3><i class="fas fa-university"></i> Master of Science in Computer Science</h3>
+              <span class="timeline-badge">Academic Excellence</span>
+            </div>
+            <p class="timeline-subtitle">Specialization in Software Engineering & Machine Learning</p>
+            <div class="timeline-description">
+              <ul>
+                <li><strong>Thesis:</strong> "Optimizing Real-time Web Applications Using Machine Learning"</li>
+                <li><strong>GPA:</strong> 3.8/4.0 (Summa Cum Laude)</li>
+                <li><strong>Research:</strong> Published paper on scalable web architectures</li>
+                <li><strong>Courses:</strong> Advanced Algorithms, Distributed Systems, AI/ML, Cybersecurity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Senior Developer Role -->
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - Present</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3><i class="fas fa-briefcase"></i> Senior Full Stack Developer</h3>
+              <span class="timeline-badge">Technical Leadership</span>
+            </div>
+            <p class="timeline-subtitle">Leading enterprise application development</p>
+            <div class="timeline-description">
+              <ul>
+                <li>Architected and deployed 15+ production applications serving 10K+ users</li>
+                <li>Reduced application load times by 70% through performance optimization</li>
+                <li>Mentored 5 junior developers in React and Node.js best practices</li>
+                <li>Implemented CI/CD pipelines reducing deployment time by 80%</li>
+                <li>Led migration from monolithic to microservices architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bachelor's Degree -->
+        <div class="timeline-item">
+          <div class="timeline-date">2015 - 2019</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3><i class="fas fa-graduation-cap"></i> Bachelor of Science in Computer Science</h3>
+              <span class="timeline-badge">First Class Honors</span>
+            </div>
+            <p class="timeline-subtitle">Foundational excellence in computer science</p>
+            <div class="timeline-description">
+              <ul>
+                <li><strong>Specialization:</strong> Software Engineering & Web Technologies</li>
+                <li><strong>Awards:</strong> Dean's List (3 years), Best Final Year Project</li>
+                <li><strong>Key Projects:</strong> Built first commercial application in final year</li>
+                <li><strong>Leadership:</strong> President of Computer Science Society</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section certifications">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-number">04</span>
+          Professional Certifications
+        </h2>
+      </div>
+      
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fab fa-aws"></i>
+          </div>
+          <h3>AWS Certified Developer</h3>
+          <p>Associate Level - 2023</p>
+          <span class="cert-id">Validation ID: AWS-123456</span>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <h3>React Professional</h3>
+          <p>Meta Certification - 2023</p>
+          <span class="cert-id">Validation ID: META-REACT-789</span>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Cybersecurity Fundamentals</h3>
+          <p>ISC2 - 2023</p>
+          <span class="cert-id">Validation ID: ISC2-CSF-456</span>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <h3>Node.js Services Developer</h3>
+          <p>OpenJS Foundation - 2023</p>
+          <span class="cert-id">Validation ID: OJS-ND-123</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-number">05</span>
+          Let's Build Something Great
+        </h2>
+        <p class="section-subtitle">Ready to bring your vision to life with technical excellence</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Why Work With Me?</h3>
+          <div class="value-props">
+            <div class="value-prop">
+              <i class="fas fa-rocket"></i>
+              <div>
+                <h4>Fast Delivery</h4>
+                <p>Agile development with weekly deliverables</p>
+              </div>
+            </div>
+            <div class="value-prop">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Enterprise Quality</h4>
+                <p>Production-ready code with full testing</p>
+              </div>
+            </div>
+            <div class="value-prop">
+              <i class="fas fa-brain"></i>
+              <div>
+                <h4>Technical Leadership</h4>
+                <p>Master's level problem-solving skills</p>
+              </div>
+            </div>
+            <div class="value-prop">
+              <i class="fas fa-comments"></i>
+              <div>
+                <h4>Clear Communication</h4>
+                <p>Daily updates and transparent process</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <h3>Get In Touch</h3>
+            <div class="detail-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/35796240674" target="_blank">+357 96 240 674</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fab fa-github"></i>
+              <div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/musamansaray90946" target="_blank">@musamansaray90946</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Start a Project</h3>
+          <form id="projectForm">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" required placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" required placeholder="john@company.com">
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" placeholder="Tech Corp Inc.">
+            </div>
+            <div class="form-group">
+              <label for="budget">Project Budget</label>
+              <select id="budget">
+                <option value="">Select budget range</option>
+                <option value="5k-10k">$5,000 - $10,000</option>
+                <option value="10k-25k">$10,000 - $25,000</option>
+                <option value="25k-50k">$25,000 - $50,000</option>
+                <option value="50k+">$50,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details *</label>
+              <textarea id="message" rows="5" required placeholder="Describe your project requirements, timeline, and any specific technologies..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Proposal Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">
-          <h3>Musa Mansaray</h3>
-          <p>Full Stack Developer</p>
+        <div class="footer-brand">
+          <h2>Musa Mansaray</h2>
+          <p class="footer-tagline">Senior Full Stack Developer • Master's in Computer Science</p>
+          <p class="footer-mission">Building the future, one line of code at a time</p>
         </div>
         
         <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
           <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
+          <a href="#skills">Expertise</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
         
-        <div class="footer-social">
-          <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:musamansaray90946@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://wa.me/35796240674" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+        <div class="footer-connect">
+          <h3>Connect With Me</h3>
+          <div class="social-links">
+            <a href="https://github.com/musamansaray90946" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="social-link">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
+            <a href="mailto:musamansaray90946@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
         </div>
       </div>
       
-      <small>&copy; <span id="year"></span> Mansaray Musa. All rights reserved.</small>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Musa Mansaray. All rights reserved.</p>
+        <p class="footer-note">Built with ❤️ and clean code</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

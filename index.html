@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mansaray Musa — Frontend Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mansaray Musa — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Mansaray Musa, Full Stack Developer specializing in React, JavaScript, and Firebase.">
+  <meta property="og:title" content="Mansaray Musa — Full Stack Developer">
+  <meta property="og:description" content="Building modern web applications with React, Firebase, and modern JavaScript.">
+  <meta property="og:image" content="https://musamansaray90946.github.io/portfolio/profile.jpg">
+  <meta property="og:url" content="https://musamansaray90946.github.io/portfolio/">
+  
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- Simple favicon using emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
   <header class="header">
@@ -13,8 +24,8 @@
         <img src="profile.jpg" alt="Mansaray Musa" class="profile-img" />
         <div class="profile-text">
           <h1 class="name">Mansaray Musa</h1>
-          <p class="tagline">Frontend Developer · React · JavaScript · Firebase</p>
-          <p class="education">BSc Computer Science (2019) •</p>
+          <p class="tagline">Full Stack Developer · React · JavaScript · Firebase</p>
+          <p class="education">BSc Computer Science (2019) • Self-taught Developer</p>
         </div>
       </div>
 
@@ -30,108 +41,292 @@
   <main class="container">
     <section class="hero">
       <div class="hero-left">
-        <h2>Hello — I build useful, user-focused web apps.</h2>
+        <h2>Hello — I build useful, user-focused web applications.</h2>
         <p class="hero-sub">
-          I design and build front-end applications using React and modern JavaScript.
-          My work includes realtime systems, CRUD apps and small product-focused tools.
+          I design and build full-stack applications using React, Node.js, and modern JavaScript.
+          My work includes real-time systems, CRUD applications, and responsive web interfaces.
         </p>
 
         <div class="cta-buttons">
-          <a class="primary-btn" href="mailto:musamansaray90946@gmail.com">Hire Me (Email)</a>
-          <a class="whatsapp-btn" href="https://wa.me/35796240674" target="_blank" rel="noopener">WhatsApp</a>
-          <!-- resume link points to the uploaded file path; when deployed make sure resume file is in repo root -->
-          <a class="download-btn" href="sandbox:/mnt/data/Musa new resume 1.pdf" download>Download CV</a>
+          <a class="primary-btn" href="mailto:musamansaray90946@gmail.com">
+            <i class="fas fa-envelope"></i> Hire Me
+          </a>
+          <a class="whatsapp-btn" href="https://wa.me/35796240674" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a class="download-btn" href="Musa-new-resume-1.pdf" download>
+            <i class="fas fa-download"></i> Download CV
+          </a>
         </div>
       </div>
 
       <div class="hero-right">
-        <!-- circular card with a short highlights -->
         <div class="card summary-card">
-          <h4>Skills</h4>
+          <h4>Core Technologies</h4>
           <ul class="mini-skills">
-            <li>React (Vite)</li>
-            <li>JavaScript (ES6+)</li>
-            <li>HTML & CSS</li>
-            <li>Firebase / Firestore</li>
-            <li>Responsive design</li>
+            <li><i class="fab fa-react"></i> React & Vite</li>
+            <li><i class="fab fa-js"></i> JavaScript ES6+</li>
+            <li><i class="fab fa-html5"></i> HTML5 & CSS3</li>
+            <li><i class="fas fa-database"></i> Firebase / Firestore</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+            <li><i class="fab fa-node-js"></i> Node.js Basics</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
       <div class="projects-grid">
+        <!-- Project 1 -->
         <article class="card">
           <h3>RealtimeChat — React & Firebase</h3>
-          <p>Real-time chat app with Google Authentication, Firestore real-time sync, timestamps and auto-scroll. Responsive and deployed on Netlify.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Authentication</span>
+            <span class="tech-badge">Real-time</span>
+          </div>
+          <p>Real-time chat application with Google Authentication, Firestore sync, timestamps, and auto-scroll. Fully responsive and deployed on Netlify.</p>
           <p class="links">
-            <a class="link" href="https://mansaray-chatapp.netlify.app" target="_blank" rel="noopener">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/realtimechat" target="_blank" rel="noopener">Source</a>
+            <a class="link" href="https://mansaray-chatapp.netlify.app" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a> ·
+            <a class="link" href="https://github.com/musamansaray90946/realtimechat" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
           </p>
         </article>
 
+        <!-- Project 2 -->
         <article class="card">
-          <h3>SmartInventory — React</h3>
-          <p>Inventory management UI demonstrating React components, state and CRUD flows.</p>
+          <h3>SmartInventory — React App</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">CRUD</span>
+            <span class="tech-badge">LocalStorage</span>
+          </div>
+          <p>Inventory management UI demonstrating React components, state management, and CRUD operations with a clean, modern interface.</p>
           <p class="links">
-            <a class="link" href="https://keen-profiterole-d55be3.netlify.app" target="_blank" rel="noopener">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank" rel="noopener">Source</a>
+            <a class="link" href="https://keen-profiterole-d55be3.netlify.app" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a> ·
+            <a class="link" href="https://github.com/musamansaray90946/smartinvenotry" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
           </p>
         </article>
 
+        <!-- Project 3 -->
         <article class="card">
           <h3>TaskFlow — Task Manager</h3>
-          <p>Simple, focused task manager using localStorage and a clean UI.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">HTML/CSS</span>
+            <span class="tech-badge">LocalStorage</span>
+            <span class="tech-badge">UI/UX</span>
+          </div>
+          <p>Simple, focused task manager with category filtering, priority levels, and persistent storage using localStorage.</p>
           <p class="links">
-            <a class="link" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank" rel="noopener">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/taskflow-project" target="_blank" rel="noopener">Source</a>
+            <a class="link" href="https://musamansaray90946.github.io/taskflow-project/" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a> ·
+            <a class="link" href="https://github.com/musamansaray90946/taskflow-project" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
           </p>
         </article>
 
+        <!-- Project 4 -->
         <article class="card">
-          <h3>QuickWeather — API App</h3>
-          <p>Fetches live weather data via OpenWeather API and displays clear metrics and conditions.</p>
+          <h3>QuickWeather — API Application</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">API</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Async/Await</span>
+            <span class="tech-badge">UI Design</span>
+          </div>
+          <p>Weather application fetching live data from OpenWeather API with clear metrics, 5-day forecast, and location detection.</p>
           <p class="links">
-            <a class="link" href="https://musamansaray90946.github.io/quickweather/" target="_blank" rel="noopener">Live demo</a> ·
-            <a class="link" href="https://github.com/musamansaray90946/quickweather" target="_blank" rel="noopener">Source</a>
+            <a class="link" href="https://musamansaray90946.github.io/quickweather/" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a> ·
+            <a class="link" href="https://github.com/musamansaray90946/quickweather" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </p>
+        </article>
+
+        <!-- NEW Project 5 -->
+        <article class="card">
+          <h3>E-Commerce Dashboard</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Chart.js</span>
+          </div>
+          <p>Full-featured e-commerce dashboard with product management, order tracking, user authentication, and sales analytics.</p>
+          <p class="links">
+            <span class="link coming-soon">
+              <i class="fas fa-code-branch"></i> In Development
+            </span>
+          </p>
+        </article>
+
+        <!-- NEW Project 6 -->
+        <article class="card">
+          <h3>Personal Finance Tracker</h3>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Chart.js</span>
+            <span class="tech-badge">Express</span>
+            <span class="tech-badge">SQLite</span>
+          </div>
+          <p>Comprehensive finance tracking application with expense categorization, budgeting tools, and interactive data visualization.</p>
+          <p class="links">
+            <span class="link coming-soon">
+              <i class="fas fa-code-branch"></i> In Development
+            </span>
           </p>
         </article>
       </div>
     </section>
 
     <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML / CSS / JavaScript</li>
-        <li>React (Vite) & Component Design</li>
-        <li>Firebase Auth & Firestore</li>
-        <li>Responsive Web Design</li>
-        <li>Git, GitHub, Deployment (Netlify)</li>
-      </ul>
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <ul class="skills-list">
+            <li><i class="fab fa-html5"></i> HTML5 & Semantic Markup</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3 & Modern Layouts (Flexbox/Grid)</li>
+            <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
+            <li><i class="fab fa-react"></i> React & Component Architecture</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Web Design</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend & Tools</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-database"></i> Firebase (Auth, Firestore)</li>
+            <li><i class="fab fa-node-js"></i> Node.js & Express Basics</li>
+            <li><i class="fas fa-database"></i> MongoDB Fundamentals</li>
+            <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+            <li><i class="fas fa-rocket"></i> Deployment (Netlify, GitHub Pages)</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Development & Soft Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-search"></i> Problem Solving</li>
+            <li><i class="fas fa-lightbulb"></i> Clean Code Practices</li>
+            <li><i class="fas fa-users"></i> Collaboration & Communication</li>
+            <li><i class="fas fa-bolt"></i> Fast Learning & Adaptability</li>
+            <li><i class="fas fa-project-diagram"></i> Project Management</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="education" class="section">
-      <h2>Education</h2>
+      <h2>Education &amp; Experience</h2>
       <div class="edu-grid">
         <div class="edu-card">
-          <h4>BSc — Computer Science</h4>
+          <h4><i class="fas fa-graduation-cap"></i> BSc Computer Science</h4>
           <p class="muted">Graduated 2019</p>
+          <p>Strong foundation in algorithms, data structures, and software engineering principles.</p>
+        </div>
+        <div class="edu-card">
+          <h4><i class="fas fa-laptop-code"></i> Self-taught Development</h4>
+          <p class="muted">2020 - Present</p>
+          <p>Continuous learning through online courses, documentation, and building real projects.</p>
+        </div>
+        <div class="edu-card">
+          <h4><i class="fas fa-certificate"></i> Frontend Development</h4>
+          <p class="muted">Online Certifications</p>
+          <p>Completed various online courses in React, JavaScript, and modern web development.</p>
+        </div>
+        <div class="edu-card">
+          <h4><i class="fas fa-briefcase"></i> Freelance Projects</h4>
+          <p class="muted">2022 - Present</p>
+          <p>Building responsive websites and web applications for clients and personal projects.</p>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/35796240674" target="_blank" rel="noopener">+357 96 240 674</a></p>
-      <p>GitHub: <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">github.com/musamansaray90946</a></p>
+      <h2>Get In Touch</h2>
+      <p>I'm always open to discussing new opportunities, interesting projects, or just chatting about technology.</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/35796240674" target="_blank" rel="noopener">+357 96 240 674</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">github.com/musamansaray90946</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>Available for Remote Work Worldwide</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> Mansaray Musa — Frontend Developer</small>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Musa Mansaray</h3>
+          <p>Full Stack Developer</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="https://github.com/musamansaray90946" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:musamansaray90946@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/35796240674" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      
+      <small>&copy; <span id="year"></span> Mansaray Musa. All rights reserved.</small>
     </div>
   </footer>
 

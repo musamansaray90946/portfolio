@@ -1,12 +1,31 @@
-// Update footer year automatically
-document.getElementById('year').textContent = new Date().getFullYear();
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-// Smooth scroll for navigation clicks
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
+
+// Close menu when clicking a link
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
   });
 });
+
+// Reveal on scroll
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+reveals.forEach(item => observer.observe(item));

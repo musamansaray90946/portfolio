@@ -1,734 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Musa Mansaray — Full Stack Developer & AI Specialist</title>
-  <meta name="description" content="Full Stack Developer with Computer Science background. Building AI-powered tools, web applications, and automation systems.">
-  <meta name="keywords" content="Full Stack Developer, AI Tools, Web Development, Flutter, Automation, Computer Science">
-  <meta name="author" content="Musa Mansaray">
-  
-  <!-- Open Graph Tags for Social Sharing -->
-  <meta property="og:title" content="Musa Mansaray — Full Stack Developer & AI Specialist">
-  <meta property="og:description" content="Building AI-powered tools, web applications, and automation systems.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://musamansaray90946.github.io/portfolio/">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-  
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  
+  <title>Musa Mansaray — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- Navigation -->
+  <!-- NAVBAR -->
   <header class="header">
-    <div class="container">
-      <div class="logo">MUSA<span class="logo-dot">.</span></div>
+    <div class="logo">MUSA.</div>
 
-      <nav class="nav">
-        <a href="#home" class="nav-link active">
-          <i class="fas fa-home"></i> Home
-        </a>
-        <a href="#about" class="nav-link">
-          <i class="fas fa-user"></i> About
-        </a>
-        <a href="#skills" class="nav-link">
-          <i class="fas fa-code"></i> Skills
-        </a>
-        <a href="#projects" class="nav-link">
-          <i class="fas fa-project-diagram"></i> Projects
-        </a>
-        <a href="#experience" class="nav-link">
-          <i class="fas fa-briefcase"></i> Experience
-        </a>
-        <a href="#contact" class="nav-link">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
-      </nav>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <div class="menu-btn" id="menuBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
     </div>
   </header>
 
-  <!-- Mobile Menu -->
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" class="mobile-link">
-      <i class="fas fa-home"></i> Home
-    </a>
-    <a href="#about" class="mobile-link">
-      <i class="fas fa-user"></i> About
-    </a>
-    <a href="#skills" class="mobile-link">
-      <i class="fas fa-code"></i> Skills
-    </a>
-    <a href="#projects" class="mobile-link">
-      <i class="fas fa-project-diagram"></i> Projects
-    </a>
-    <a href="#experience" class="mobile-link">
-      <i class="fas fa-briefcase"></i> Experience
-    </a>
-    <a href="#contact" class="mobile-link">
-      <i class="fas fa-envelope"></i> Contact
-    </a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="home" class="hero reveal">
-    <div class="container">
-      <div class="hero-content">
-        <div class="badge">
-          <i class="fas fa-graduation-cap"></i> Computer Science Graduate
-        </div>
-        
-        <h1 class="hero-title">
-          <span class="gradient-text">Musa Mansaray</span>
-        </h1>
-        
-        <h2 class="hero-subtitle">
-          Full Stack Developer & AI Specialist
-        </h2>
-        
-        <p class="hero-description">
-          I build <span class="highlight">AI-powered tools</span> and <span class="highlight">modern web applications</span> 
-          that solve real problems. With a background in Computer Science, I focus on creating 
-          efficient automation systems and scalable digital products.
-        </p>
+    <div class="hero-content">
+      <h1>Musa Mansaray</h1>
+      <p>
+        Tech guy with a strong background in computer science.  
+        I build simple digital products, automation setups, AI content systems, and clean frontend work.
+      </p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
 
-        <div class="hero-stats">
-          <div class="stat">
-            <h3>20+</h3>
-            <p>Projects Built</p>
-          </div>
-          <div class="stat">
-            <h3>1.5+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div class="stat">
-            <h3>100%</h3>
-            <p>Client Focus</p>
-          </div>
-        </div>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-eye"></i> View My Work
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <i class="fas fa-rocket"></i> Start a Project
-          </a>
-          <a href="Musa-Mansaray-Resume.pdf" download class="btn btn-outline">
-            <i class="fas fa-download"></i> Download CV
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <div class="image-wrapper">
-          <img src="profile.jpg" alt="Musa Mansaray" class="profile-img" />
-          <div class="status-indicator">
-            <span class="status-dot"></span>
-            Available for opportunities
-          </div>
-        </div>
-      </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Profile" />
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about" class="about reveal">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">01</span> About Me
-      </h2>
+    <h2>About Me</h2>
+    <p>
+      I enjoy turning small ideas into working digital projects.  
+      My work covers automation, AI tools, content systems, and web projects.
+    </p>
+    <p>
+      I like simple, clean results that help people move faster and achieve more with less stress.
+    </p>
 
-      <div class="about-content">
-        <div class="about-text">
-          <p class="lead">
-            I started building small digital projects years ago. That curiosity evolved into a passion 
-            for creating technology that makes life easier and businesses more efficient.
-          </p>
-          
-          <div class="about-details">
-            <div class="detail">
-              <i class="fas fa-graduation-cap"></i>
-              <div>
-                <h4>Education</h4>
-                <p>BSc Computer Science<br>MSc Computer Science (Graduated 2025)</p>
-              </div>
-            </div>
-            
-            <div class="detail">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Location</h4>
-                <p>Sierra Leone / Remote</p>
-              </div>
-            </div>
-            
-            <div class="detail">
-              <i class="fas fa-bullseye"></i>
-              <div>
-                <h4>Focus Areas</h4>
-                <p>AI Tools, Web Apps, Automation Systems</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="approach">
-            <h3>My Approach</h3>
-            <ul>
-              <li><i class="fas fa-check"></i> <strong>Problem-First:</strong> Start with understanding the real need</li>
-              <li><i class="fas fa-check"></i> <strong>Efficiency-Focused:</strong> Build tools that save time and reduce manual work</li>
-              <li><i class="fas fa-check"></i> <strong>Clean Delivery:</strong> Simple, maintainable code and clear documentation</li>
-              <li><i class="fas fa-check"></i> <strong>Continuous Learning:</strong> Always exploring new technologies and methods</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ul>
+      <li>AI content systems</li>
+      <li>Frontend development</li>
+      <li>Automation flows</li>
+      <li>App ideas using Flutter + Supabase</li>
+    </ul>
   </section>
 
-  <!-- Skills Section -->
+  <!-- SKILLS -->
   <section id="skills" class="skills reveal">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">02</span> Technical Skills
-      </h2>
+    <h2>Skills</h2>
 
-      <div class="skills-grid">
-        <!-- Frontend Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-code"></i>
-            <h3>Frontend Development</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-name">HTML5</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 95%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">CSS3 & SCSS</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">JavaScript (ES6+)</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Responsive Design</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 92%"></div>
-              </div>
-            </div>
-          </div>
+    <div class="skill-grid">
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>UI</span>
         </div>
+      </div>
 
-        <!-- AI & Automation Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-robot"></i>
-            <h3>AI & Automation</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-name">AI Content Systems</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Automation Workflows</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Voice & Video AI</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Content Repurposing</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <h3>AI & Automation</h3>
+        <div class="tags">
+          <span>AI Workflows</span>
+          <span>Voice Content</span>
+          <span>Automation Tools</span>
         </div>
+      </div>
 
-        <!-- App Development -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>App Development</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-name">Flutter</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Supabase</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Firebase</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">REST APIs</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%"></div>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <h3>App Work</h3>
+        <div class="tags">
+          <span>Flutter</span>
+          <span>Supabase</span>
         </div>
+      </div>
 
-        <!-- Tools -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-tools"></i>
-            <h3>Tools & Platforms</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-name">Git & GitHub</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Figma</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">VS Code</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 95%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Canva</span>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <h3>Other Tools</h3>
+        <div class="tags">
+          <span>Git</span>
+          <span>Figma</span>
+          <span>Canva</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- PROJECTS -->
   <section id="projects" class="projects reveal">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">03</span> Featured Projects
-      </h2>
+    <h2>Projects</h2>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-badge">AI Powered</div>
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="Regret Vault" />
-          </div>
-          <div class="project-content">
-            <h3>Regret Vault</h3>
-            <p class="project-description">
-              Anonymous regret-sharing platform powered by AI. Creates viral content from user stories 
-              with automated voiceovers, captions, and social media formatting.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">AI</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">Automation</span>
-            </div>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Anonymous submissions</span>
-              <span><i class="fas fa-check"></i> AI content generation</span>
-              <span><i class="fas fa-check"></i> Social media automation</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>AgriAssist SL</h3>
+        <p>A simple farming record and guide app built with Flutter + Supabase.</p>
+      </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-badge">Mobile App</div>
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?w-600&h=400&fit=crop" alt="AgriAssist SL" />
-          </div>
-          <div class="project-content">
-            <h3>AgriAssist SL</h3>
-            <p class="project-description">
-              Mobile app helping farmers manage records, access farming guides, and connect with 
-              agricultural experts. Built with Flutter and Supabase backend.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Supabase</span>
-              <span class="tech-tag">Dart</span>
-              <span class="tech-tag">Mobile</span>
-            </div>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Farm management</span>
-              <span><i class="fas fa-check"></i> Expert directory</span>
-              <span><i class="fas fa-check"></i> Offline support</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="project-card">
+        <h3>Regret Vault</h3>
+        <p>Anonymous regret-sharing platform using AI to create powerful stories.</p>
+      </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-badge">Automation System</div>
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Faceless Brand" />
-          </div>
-          <div class="project-content">
-            <h3>Faceless Brand System</h3>
-            <p class="project-description">
-              Complete automation pipeline for AI-based YouTube and social content — from script 
-              generation to voice synthesis, captions, and multi-platform repurposing.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">AI APIs</span>
-              <span class="tech-tag">Automation</span>
-              <span class="tech-tag">Content</span>
-            </div>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Script automation</span>
-              <span><i class="fas fa-check"></i> Voice synthesis</span>
-              <span><i class="fas fa-check"></i> Multi-platform</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="project-card">
+        <h3>Faceless Brand System</h3>
+        <p>AI-powered content system for voice, scripts, captions, and automation.</p>
+      </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-badge">Web Clone</div>
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop" alt="Facebook Clone" />
-          </div>
-          <div class="project-content">
-            <h3>Facebook Clone</h3>
-            <p class="project-description">
-              Full-featured social media platform clone with feed, profiles, likes, comments, 
-              and image uploads using Firebase Storage and real-time database.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">CSS3</span>
-            </div>
-            <div class="project-features">
-              <span><i class="fas fa-check"></i> Real-time updates</span>
-              <span><i class="fas fa-check"></i> Image uploads</span>
-              <span><i class="fas fa-check"></i> User profiles</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="project-card">
+        <h3>Facebook Clone</h3>
+        <p>Likes, comments, user profiles, and image uploads with Firebase.</p>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="experience reveal">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">04</span> Experience & Background
-      </h2>
-
-      <div class="timeline">
-        <!-- Education 1 -->
-        <div class="timeline-item">
-          <div class="timeline-date">2023 - 2025</div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3><i class="fas fa-university"></i> MSc Computer Science</h3>
-              <span class="timeline-badge">Graduated</span>
-            </div>
-            <p class="timeline-subtitle">University of Sierra Leone</p>
-            <div class="timeline-description">
-              <ul>
-                <li><strong>Focus:</strong> Advanced web technologies & software architecture</li>
-                <li><strong>Research:</strong> AI applications in content automation</li>
-                <li><strong>Skills:</strong> Enhanced development and research capabilities</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Education 2 -->
-        <div class="timeline-item">
-          <div class="timeline-date">2015 - 2019</div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3><i class="fas fa-graduation-cap"></i> BSc Computer Science</h3>
-              <span class="timeline-badge">Second Class Honors</span>
-            </div>
-            <p class="timeline-subtitle">University of Sierra Leone</p>
-            <div class="timeline-description">
-              <ul>
-                <li><strong>Foundation:</strong> Software engineering principles</li>
-                <li><strong>Projects:</strong> Built first commercial applications</li>
-                <li><strong>Focus:</strong> Web development & database systems</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Professional Experience -->
-        <div class="timeline-item">
-          <div class="timeline-date">2022 - Present</div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3><i class="fas fa-briefcase"></i> Freelance Developer & AI Specialist</h3>
-              <span class="timeline-badge">Self-Employed</span>
-            </div>
-            <p class="timeline-subtitle">Building digital products & automation systems</p>
-            <div class="timeline-description">
-              <ul>
-                <li>Developed 20+ web applications and AI tools</li>
-                <li>Built automation systems reducing manual work by 80%</li>
-                <li>Created content brand systems using AI workflows</li>
-                <li>Developed mobile apps for agriculture and social platforms</li>
-                <li>Implemented scalable solutions for small businesses</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact" class="contact reveal">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-number">05</span> Let's Build Something
-      </h2>
+    <h2>Contact Me</h2>
 
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Why Work With Me?</h3>
-          
-          <div class="value-points">
-            <div class="point">
-              <i class="fas fa-bolt"></i>
-              <div>
-                <h4>Fast Execution</h4>
-                <p>I deliver working solutions quickly</p>
-              </div>
-            </div>
-            
-            <div class="point">
-              <i class="fas fa-cogs"></i>
-              <div>
-                <h4>Automation Focus</h4>
-                <p>Build systems that save time long-term</p>
-              </div>
-            </div>
-            
-            <div class="point">
-              <i class="fas fa-lightbulb"></i>
-              <div>
-                <h4>Creative Solutions</h4>
-                <p>Unique approaches to common problems</p>
-              </div>
-            </div>
-            
-            <div class="point">
-              <i class="fas fa-comments"></i>
-              <div>
-                <h4>Clear Communication</h4>
-                <p>Regular updates and transparent process</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-details">
-            <h3>Contact Details</h3>
-            
-            <div class="detail-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:musamansaray90946@gmail.com">musamansaray90946@gmail.com</a>
-              </div>
-            </div>
-            
-            <div class="detail-item">
-              <i class="fab fa-whatsapp"></i>
-              <div>
-                <h4>WhatsApp</h4>
-                <a href="https://wa.me/35796240674" target="_blank">+357 96 240 674</a>
-              </div>
-            </div>
-            
-            <div class="detail-item">
-              <i class="fab fa-github"></i>
-              <div>
-                <h4>GitHub</h4>
-                <a href="https://github.com/musamansaray90946" target="_blank">musamansaray90946</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <h3>Start a Project</h3>
-          
-          <form id="contactForm" action="https://formspree.io/f/your_form_id" method="POST">
-            <div id="formMessage"></div>
-            
-            <div class="form-group">
-              <label for="name">Your Name *</label>
-              <input type="text" id="name" name="name" required placeholder="John Smith">
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="john@company.com">
-            </div>
-            
-            <div class="form-group">
-              <label for="subject">Project Type</label>
-              <select id="subject" name="subject">
-                <option value="">Select project type</option>
-                <option value="web">Web Application</option>
-                <option value="ai">AI / Automation Tool</option>
-                <option value="mobile">Mobile App</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Project Details *</label>
-              <textarea id="message" name="message" rows="5" required 
-                placeholder="Tell me about your project, timeline, and goals..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send</button>
+    </form>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h2>MUSA<span class="logo-dot">.</span></h2>
-          <p class="footer-tagline">Full Stack Developer & AI Specialist</p>
-          <p class="footer-mission">Building efficient digital solutions</p>
-        </div>
-        
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        
-        <div class="footer-social">
-          <h3>Connect</h3>
-          <div class="social-links">
-            <a href="https://github.com/musamansaray90946" target="_blank" class="social-link">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="mailto:musamansaray90946@gmail.com" class="social-link">
-              <i class="fas fa-envelope"></i>
-              <span>Email</span>
-            </a>
-            <a href="https://wa.me/35796240674" target="_blank" class="social-link">
-              <i class="fab fa-whatsapp"></i>
-              <span>WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Musa Mansaray. All rights reserved.</p>
-        <p class="footer-note">Built with HTML, CSS & JavaScript</p>
-      </div>
-    </div>
+    <p>© 2025 Musa Mansaray</p>
   </footer>
-
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
 
   <script src="script.js"></script>
 </body>
+
 </html>

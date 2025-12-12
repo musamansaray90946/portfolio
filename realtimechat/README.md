@@ -1,30 +1,28 @@
-# Musa Mansaray — Personal Portfolio
+# Musa Mansaray — Portfolio
 
-This portfolio highlights my work in tech, automation, AI content systems, and app concepts.  
-The site includes a hero section, bio, skills, featured projects, and a working contact form.
+This is my personal portfolio website.  
+I use it to share my work, skills, and the digital tools I build.
 
----
+## 🔧 What I Work On
+- Web development  
+- Mobile apps (Flutter + Supabase)  
+- AI content systems  
+- Automation workflows  
+- Simple tools for creators and small businesses  
 
-## 🔧 Tech Used
-- HTML
-- CSS
-- JavaScript
+## 📌 Features
+- Clean responsive layout  
+- Project showcase  
+- Mobile menu  
+- Contact form powered by Formspree  
+- Smooth structure built with HTML, CSS, and JavaScript  
 
----
+## 📬 Contact
+The contact form sends messages directly to my inbox:  
+Formspree endpoint: `https://formspree.io/f/mblnprel`
 
-## 📌 Sections
-- **Home:** Short intro and call-to-action  
-- **About:** My background and what I focus on  
-- **Skills:** Core tools and areas I work with  
-- **Projects:** Main projects I’ve built or started  
-- **Contact:** Form that sends messages to my email  
+## 🚀 Deployment
+The site is hosted on GitHub Pages:  
+`https://musamansaray90946.github.io/portfolio/`
 
----
-
-## 📬 Contact Form Setup
-
-The form uses **Formspree**.  
-Create a free account and copy your form ID.
-
-Replace this line in `index.html`:
-
+To update:

@@ -29,11 +29,4 @@ You can also reach me here:
 - GitHub: **@musamansaray90946**  
 - WhatsApp: **+357 96 240 674**
 
-## 🚀 Deployment
-The site is deployed using GitHub Pages.
 
-To update your live website:
-```bash
-git add.
-git commit -m "update portfolio."
-git push

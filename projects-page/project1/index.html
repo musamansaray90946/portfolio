@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriAssist SL - Farming Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>AgriAssist SL</span>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#crops">Crops</a>
+                <a href="#expenses">Expenses</a>
+                <a href="#market">Market</a>
+                <a href="#weather">Weather</a>
+            </div>
+            <button class="btn-login">
+                <i class="fas fa-user"></i> Farmer Login
+            </button>
+        </nav>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="https://ui-avatars.com/api/?name=Farm+User&background=4CAF50&color=fff" alt="Farmer">
+                    <h3>Demo Farmer</h3>
+                    <p>Smallholder Farmer</p>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-tractor"></i>
+                        <div>
+                            <h4>Active Farms</h4>
+                            <p>3 Locations</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-seedling"></i>
+                        <div>
+                            <h4>Crops Growing</h4>
+                            <p>5 Types</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <h4>Next Harvest</h4>
+                            <p>45 Days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-widget">
+                    <h4><i class="fas fa-cloud-sun"></i> Weather</h4>
+                    <div class="weather-info">
+                        <div class="temp">28°C</div>
+                        <div class="condition">Partly Cloudy</div>
+                        <div class="humidity">Humidity: 65%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <header class="dashboard-header">
+                    <h1>Farming Dashboard</h1>
+                    <div class="date-display" id="currentDate"></div>
+                </header>
+
+                <div class="stats-cards">
+                    <div class="stat-card income">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <h3>Le 12,450,000</h3>
+                            <p>Season Income</p>
+                        </div>
+                    </div>
+                    <div class="stat-card expenses">
+                        <i class="fas fa-receipt"></i>
+                        <div>
+                            <h3>Le 3,250,000</h3>
+                            <p>Total Expenses</p>
+                        </div>
+                    </div>
+                    <div class="stat-card profit">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h3>Le 9,200,000</h3>
+                            <p>Net Profit</p>
+                        </div>
+                    </div>
+                    <div class="stat-card yield">
+                        <i class="fas fa-weight-hanging"></i>
+                        <div>
+                            <h3>2.8 Tons</h3>
+                            <p>Expected Yield</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-sections">
+                    <section class="crop-management">
+                        <h2><i class="fas fa-leaf"></i> Crop Management</h2>
+                        <div class="crops-grid">
+                            <div class="crop-card">
+                                <div class="crop-icon rice">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3>Rice</h3>
+                                <p>2.5 Acres</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75% Growth</span>
+                            </div>
+                            <div class="crop-card">
+                                <div class="crop-icon cassava">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h3>Cassava</h3>
+                                <p>1.8 Acres</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 60%"></div>
+                                </div>
+                                <span class="progress-text">60% Growth</span>
+                            </div>
+                            <div class="crop-card">
+                                <div class="crop-icon vegetables">
+                                    <i class="fas fa-carrot"></i>
+                                </div>
+                                <h3>Vegetables</h3>
+                                <p>0.5 Acres</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                                <span class="progress-text">Ready for Harvest</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="expense-tracker">
+                        <h2><i class="fas fa-chart-pie"></i> Expense Tracker</h2>
+                        <div class="expense-chart">
+                            <canvas id="expenseChart"></canvas>
+                        </div>
+                        <div class="expense-list">
+                            <h4>Recent Expenses</h4>
+                            <ul>
+                                <li>
+                                    <span>Seeds & Fertilizer</span>
+                                    <span class="amount">Le 450,000</span>
+                                </li>
+                                <li>
+                                    <span>Labor Costs</span>
+                                    <span class="amount">Le 850,000</span>
+                                </li>
+                                <li>
+                                    <span>Equipment Rental</span>
+                                    <span class="amount">Le 300,000</span>
+                                </li>
+                                <li>
+                                    <span>Transportation</span>
+                                    <span class="amount">Le 150,000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="market-prices">
+                        <h2><i class="fas fa-shopping-cart"></i> Market Prices</h2>
+                        <div class="price-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Crop</th>
+                                        <th>Unit</th>
+                                        <th>Price (Le)</th>
+                                        <th>Trend</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-seedling"></i> Rice</td>
+                                        <td>50kg Bag</td>
+                                        <td>450,000</td>
+                                        <td class="trend-up"><i class="fas fa-arrow-up"></i> 5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-leaf"></i> Cassava</td>
+                                        <td>100kg</td>
+                                        <td>180,000</td>
+                                        <td class="trend-down"><i class="fas fa-arrow-down"></i> 2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-carrot"></i> Vegetables</td>
+                                        <td>Basket</td>
+                                        <td>75,000</td>
+                                        <td class="trend-up"><i class="fas fa-arrow-up"></i> 8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-apple-alt"></i> Fruits</td>
+                                        <td>Basket</td>
+                                        <td>120,000</td>
+                                        <td class="trend-stable"><i class="fas fa-minus"></i> Stable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="tasks-section">
+                        <h2><i class="fas fa-tasks"></i> Today's Tasks</h2>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <input type="checkbox" id="task1">
+                                <label for="task1">Water vegetable garden</label>
+                                <span class="task-time">Morning</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task2">
+                                <label for="task2">Check rice field irrigation</label>
+                                <span class="task-time">Afternoon</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task3">
+                                <label for="task3">Apply fertilizer to cassava</label>
+                                <span class="task-time">Evening</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task4">
+                                <label for="task4">Record expenses for the week</label>
+                                <span class="task-time">Anytime</span>
+                            </div>
+                        </div>
+                        <button class="btn-add-task">
+                            <i class="fas fa-plus"></i> Add New Task
+                        </button>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>AgriAssist SL - Empowering Farmers in Sierra Leone</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-download"></i> Export Report</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

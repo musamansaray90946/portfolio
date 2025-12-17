@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard - Live Cryptocurrency Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-coins"></i>
+                <span>Crypto<span class="logo-highlight">Dash</span></span>
+            </div>
+            
+            <div class="header-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchCrypto" placeholder="Search cryptocurrency...">
+                </div>
+                
+                <div class="time-filter">
+                    <button class="time-btn active" data-time="24h">24H</button>
+                    <button class="time-btn" data-time="7d">7D</button>
+                    <button class="time-btn" data-time="30d">30D</button>
+                    <button class="time-btn" data-time="90d">90D</button>
+                </div>
+                
+                <button class="btn-refresh" id="refreshBtn">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh
+                </button>
+            </div>
+            
+            <div class="user-profile">
+                <div class="profile-info">
+                    <span class="username">Demo User</span>
+                    <span class="balance">$25,430.50</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Crypto+Trader&background=667eea&color=fff" alt="User">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <!-- Market Overview -->
+                <section class="market-overview card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-line"></i> Market Overview</h2>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="market-stats">
+                        <div class="market-stat">
+                            <span class="stat-label">Total Market Cap</span>
+                            <span class="stat-value" id="totalMarketCap">$2.45T</span>
+                            <span class="stat-change positive">+2.34%</span>
+                        </div>
+                        <div class="market-stat">
+                            <span class="stat-label">24h Volume</span>
+                            <span class="stat-value" id="dailyVolume">$84.2B</span>
+                            <span class="stat-change positive">+5.67%</span>
+                        </div>
+                        <div class="market-stat">
+                            <span class="stat-label">BTC Dominance</span>
+                            <span class="stat-value" id="btcDominance">52.8%</span>
+                            <span class="stat-change negative">-0.45%</span>
+                        </div>
+                        <div class="market-stat">
+                            <span class="stat-label">Fear & Greed Index</span>
+                            <span class="stat-value" id="fearGreed">72</span>
+                            <span class="greed-level">Greed</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Portfolio Summary -->
+                <section class="portfolio-summary card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-wallet"></i> Portfolio</h2>
+                        <button class="btn-add-crypto">
+                            <i class="fas fa-plus"></i> Add Asset
+                        </button>
+                    </div>
+                    
+                    <div class="portfolio-value">
+                        <span class="value-label">Total Value</span>
+                        <span class="value-amount">$25,430.50</span>
+                        <span class="value-change positive">+$1,234.20 (5.1%)</span>
+                    </div>
+                    
+                    <div class="portfolio-distribution">
+                        <canvas id="portfolioChart"></canvas>
+                    </div>
+                    
+                    <div class="portfolio-breakdown">
+                        <div class="breakdown-item">
+                            <span class="crypto-name">
+                                <i class="fab fa-bitcoin"></i> Bitcoin
+                            </span>
+                            <span class="crypto-value">$15,250.30</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="crypto-name">
+                                <i class="fab fa-ethereum"></i> Ethereum
+                            </span>
+                            <span class="crypto-value">$6,430.75</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="crypto-name">
+                                <i class="fas fa-coins"></i> Cardano
+                            </span>
+                            <span class="crypto-value">$2,150.40</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="crypto-name">
+                                <i class="fas fa-gem"></i> Others
+                            </span>
+                            <span class="crypto-value">$1,599.05</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Watchlist -->
+                <section class="watchlist card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-star"></i> Watchlist</h2>
+                        <button class="btn-edit">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                    </div>
+                    
+                    <div class="watchlist-items" id="watchlistItems">
+                        <!-- Watchlist items will be added dynamically -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <!-- Top Cryptocurrencies -->
+                <section class="top-cryptos card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-list-ol"></i> Top Cryptocurrencies</h2>
+                        <div class="view-options">
+                            <button class="view-option active" data-view="market_cap">Market Cap</button>
+                            <button class="view-option" data-view="volume">Volume</button>
+                            <button class="view-option" data-view="gainers">Gainers</button>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-table-container">
+                        <table class="crypto-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>24h Change</th>
+                                    <th>Market Cap</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cryptoTableBody">
+                                <!-- Crypto data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Price Charts -->
+                <section class="price-charts card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-bar"></i> Price Charts</h2>
+                        <div class="chart-options">
+                            <button class="chart-btn active" data-chart="bitcoin">
+                                <i class="fab fa-bitcoin"></i> BTC
+                            </button>
+                            <button class="chart-btn" data-chart="ethereum">
+                                <i class="fab fa-ethereum"></i> ETH
+                            </button>
+                            <button class="chart-btn" data-chart="cardano">
+                                <i class="fas fa-coins"></i> ADA
+                            </button>
+                            <button class="chart-btn" data-chart="solana">
+                                <i class="fas fa-sun"></i> SOL
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-info">
+                        <div class="chart-current-price">
+                            <span class="price-label">Current Price</span>
+                            <span class="price-value" id="currentPrice">$64,823.45</span>
+                            <span class="price-change positive" id="priceChange">+2.45%</span>
+                        </div>
+                        <div class="chart-stats">
+                            <div class="chart-stat">
+                                <span class="stat-label">24h High</span>
+                                <span class="stat-value" id="dayHigh">$65,210.30</span>
+                            </div>
+                            <div class="chart-stat">
+                                <span class="stat-label">24h Low</span>
+                                <span class="stat-value" id="dayLow">$63,450.20</span>
+                            </div>
+                            <div class="chart-stat">
+                                <span class="stat-label">24h Volume</span>
+                                <span class="stat-value" id="chartVolume">$32.4B</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent News -->
+                <section class="crypto-news card">
+                    <div class="section-header">
+                        <h2><i class="fas fa-newspaper"></i> Crypto News</h2>
+                        <button class="btn-view-all">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="news-feed" id="newsFeed">
+                        <!-- News items will be loaded here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Trading Panel -->
+        <div class="trading-panel card">
+            <div class="trading-header">
+                <h3><i class="fas fa-exchange-alt"></i> Quick Trade</h3>
+                <div class="trading-mode">
+                    <button class="mode-btn active" data-mode="buy">Buy</button>
+                    <button class="mode-btn" data-mode="sell">Sell</button>
+                </div>
+            </div>
+            
+            <div class="trading-form">
+                <div class="form-group">
+                    <label for="tradeCrypto">Cryptocurrency</label>
+                    <select id="tradeCrypto">
+                        <option value="bitcoin">Bitcoin (BTC)</option>
+                        <option value="ethereum">Ethereum (ETH)</option>
+                        <option value="cardano">Cardano (ADA)</option>
+                        <option value="solana">Solana (SOL)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tradeAmount">Amount (USD)</label>
+                    <input type="number" id="tradeAmount" value="100" min="10" step="10">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tradeQuantity">Quantity</label>
+                    <div class="quantity-display">
+                        <input type="text" id="tradeQuantity" readonly value="0.001543">
+                        <span class="quantity-unit" id="quantityUnit">BTC</span>
+                    </div>
+                </div>
+                
+                <div class="trade-summary">
+                    <div class="summary-item">
+                        <span>Estimated Cost</span>
+                        <span id="estimatedCost">$100.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Fees (0.1%)</span>
+                        <span id="tradeFees">$0.10</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="tradeTotal">$100.10</span>
+                    </div>
+                </div>
+                
+                <button class="btn-trade" id="executeTrade">
+                    <i class="fas fa-check"></i> Execute Trade
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <i class="fas fa-coins"></i>
+                        <span>Crypto<span class="logo-highlight">Dash</span></span>
+                    </div>
+                    <p>Live cryptocurrency tracking and portfolio management</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-chart-line"></i> Markets</a>
+                    <a href="#"><i class="fas fa-wallet"></i> Portfolio</a>
+                    <a href="#"><i class="fas fa-exchange-alt"></i> Trade</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+                
+                <div class="footer-disclaimer">
+                    <p><i class="fas fa-exclamation-circle"></i> This is a demo application. Prices are simulated and not real-time.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Crypto Dashboard Demo. Data updates every 30 seconds.</p>
+                <div class="update-status">
+                    <span class="status-dot"></span>
+                    <span id="lastUpdate">Last update: Just now</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

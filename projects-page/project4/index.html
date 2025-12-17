@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Drag & Drop Task Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-tasks"></i>
+                <h1>Task<span class="logo-highlight">Flow</span></h1>
+                <p>Stay organized, stay productive</p>
+            </div>
+
+            <!-- User Profile -->
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=667eea&color=fff" alt="User">
+                    <div class="status-indicator online"></div>
+                </div>
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>Product Manager</p>
+                </div>
+                <button class="btn-profile-menu">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-columns"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                            <span class="nav-badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Team</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Project List -->
+            <div class="projects-section">
+                <div class="section-header">
+                    <h3>Projects</h3>
+                    <button class="btn-add-project">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <ul class="project-list">
+                    <li class="project-item active">
+                        <div class="project-color" style="background: #667eea;"></div>
+                        <span>Website Redesign</span>
+                        <span class="project-count">12</span>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-color" style="background: #48bb78;"></div>
+                        <span>Mobile App</span>
+                        <span class="project-count">8</span>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-color" style="background: #ed8936;"></div>
+                        <span>Marketing Campaign</span>
+                        <span class="project-count">15</span>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-color" style="background: #9f7aea;"></div>
+                        <span>Product Launch</span>
+                        <span class="project-count">6</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Completed</h4>
+                        <p>128 Tasks</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>In Progress</h4>
+                        <p>24 Tasks</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <span>Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <h2>Dashboard</h2>
+                    <div class="breadcrumb">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search tasks, projects...">
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="btn-action" title="Notifications">
+                            <i class="far fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <button class="btn-action" title="Quick Add">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="btn-action" id="filterToggle" title="Filter">
+                            <i class="fas fa-filter"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Filter Panel -->
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-section">
+                    <h4>Filter by Status</h4>
+                    <div class="filter-tags">
+                        <button class="filter-tag active" data-status="all">All</button>
+                        <button class="filter-tag" data-status="todo">To Do</button>
+                        <button class="filter-tag" data-status="in-progress">In Progress</button>
+                        <button class="filter-tag" data-status="review">Review</button>
+                        <button class="filter-tag" data-status="done">Done</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Filter by Priority</h4>
+                    <div class="filter-tags">
+                        <button class="filter-tag active" data-priority="all">All</button>
+                        <button class="filter-tag priority-high" data-priority="high">
+                            <i class="fas fa-exclamation-circle"></i> High
+                        </button>
+                        <button class="filter-tag priority-medium" data-priority="medium">
+                            <i class="fas fa-exclamation-triangle"></i> Medium
+                        </button>
+                        <button class="filter-tag priority-low" data-priority="low">
+                            <i class="fas fa-info-circle"></i> Low
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Sort by</h4>
+                    <select class="sort-select">
+                        <option value="due-date">Due Date</option>
+                        <option value="priority">Priority</option>
+                        <option value="created">Recently Created</option>
+                        <option value="updated">Recently Updated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #667eea20; color: #667eea;">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>42</h3>
+                        <p>Total Tasks</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #48bb7820; color: #48bb78;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>18</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #ed893620; color: #ed8936;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>In Progress</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f5656520; color: #f56565;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>7</h3>
+                        <p>Overdue</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kanban Board -->
+            <section class="kanban-board">
+                <div class="board-header">
+                    <h3>Project Board</h3>
+                    <div class="board-controls">
+                        <button class="btn-add-task" id="addTaskBtn">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                        <button class="btn-view-toggle">
+                            <i class="fas fa-th"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Board Columns -->
+                <div class="board-columns">
+                    <!-- To Do Column -->
+                    <div class="board-column" data-status="todo">
+                        <div class="column-header">
+                            <div class="column-title">
+                                <span class="column-bullet" style="background: #f56565;"></span>
+                                <h4>To Do</h4>
+                                <span class="task-count">8</span>
+                            </div>
+                            <button class="column-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="column-body" id="todoColumn">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <div class="column-footer">
+                            <button class="btn-add-column-task">
+                                <i class="fas fa-plus"></i> Add Task
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- In Progress Column -->
+                    <div class="board-column" data-status="in-progress">
+                        <div class="column-header">
+                            <div class="column-title">
+                                <span class="column-bullet" style="background: #ed8936;"></span>
+                                <h4>In Progress</h4>
+                                <span class="task-count">5</span>
+                            </div>
+                            <button class="column-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="column-body" id="progressColumn">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <div class="column-footer">
+                            <button class="btn-add-column-task">
+                                <i class="fas fa-plus"></i> Add Task
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Review Column -->
+                    <div class="board-column" data-status="review">
+                        <div class="column-header">
+                            <div class="column-title">
+                                <span class="column-bullet" style="background: #4299e1;"></span>
+                                <h4>Review</h4>
+                                <span class="task-count">3</span>
+                            </div>
+                            <button class="column-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="column-body" id="reviewColumn">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <div class="column-footer">
+                            <button class="btn-add-column-task">
+                                <i class="fas fa-plus"></i> Add Task
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Done Column -->
+                    <div class="board-column" data-status="done">
+                        <div class="column-header">
+                            <div class="column-title">
+                                <span class="column-bullet" style="background: #48bb78;"></span>
+                                <h4>Done</h4>
+                                <span class="task-count">12</span>
+                            </div>
+                            <button class="column-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="column-body" id="doneColumn">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <div class="column-footer">
+                            <button class="btn-add-column-task">
+                                <i class="fas fa-plus"></i> Add Task
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Feed -->
+            <section class="activity-feed">
+                <div class="feed-header">
+                    <h3>Recent Activity</h3>
+                    <button class="btn-view-all">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="feed-list" id="activityFeed">
+                    <!-- Activity items will be added here dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Task Modal -->
+    <div class="task-modal" id="taskModal">
+        <div class="task-modal-content">
+            <div class="modal-header">
+                <h3>Add New Task</h3>
+                <button class="close-modal" id="closeTaskModal">&times;</button>
+            </div>
+            
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title *</label>
+                    <input type="text" id="taskTitle" placeholder="Enter task title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" rows="3" placeholder="Describe the task..."></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskStatus">Status</label>
+                        <select id="taskStatus">
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskDueDate">Due Date</label>
+                        <input type="date" id="taskDueDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskAssignee">Assignee</label>
+                        <select id="taskAssignee">
+                            <option value="john">John Doe</option>
+                            <option value="jane">Jane Smith</option>
+                            <option value="alex">Alex Johnson</option>
+                            <option value="sarah">Sarah Wilson</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskLabels">Labels</label>
+                    <div class="labels-selector">
+                        <span class="label-tag" data-label="design">Design</span>
+                        <span class="label-tag" data-label="development">Development</span>
+                        <span class="label-tag" data-label="bug">Bug</span>
+                        <span class="label-tag" data-label="feature">Feature</span>
+                        <span class="label-tag" data-label="research">Research</span>
+                    </div>
+                    <input type="hidden" id="selectedLabels">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeTaskModal()">Cancel</button>
+                    <button type="submit" class="btn-save">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Task Detail Modal -->
+    <div class="task-detail-modal" id="taskDetailModal">
+        <div class="task-detail-content" id="taskDetailContent">
+            <!-- Task details will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Drag Drop Overlay -->
+    <div class="drag-overlay" id="dragOverlay">
+        <div class="drag-text">
+            <i class="fas fa-hand-paper"></i>
+            <p>Drop task here</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
